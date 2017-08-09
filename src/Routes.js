@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import App from './App';
+import Contacts from './pages/Contacts';
 import Sms from './pages/Sms';
 
 const Routes = () => (
   <Router>
     <div>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Contacts} />
       <Route path="/sms/:id" component={Sms} />
     </div>
   </Router>

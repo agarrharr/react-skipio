@@ -5,7 +5,7 @@ import credentials from '../credentials.json';
 
 const ITEMS_PER_PAGE = 10;
 
-class Contacts extends Component {
+class ContactList extends Component {
   state = {
     contacts: [],
     current_page: 1,
@@ -34,21 +34,19 @@ class Contacts extends Component {
 
   render() {
     return (
-      <div className="Contacts">
-          <div>
-            {this.state.contacts.map(d => (
-              <Link to={`/sms/${d.id}`} key={d.id}>
-                <Contact
-                  avatarUrl={d.avatar_url}
-                  name={d.full_name}
-                />
-              </Link>
-              )
-            )}
-          </div>
-      </div>
+        <div>
+          {this.state.contacts.map(d => (
+            <Link to={`/sms/${d.id}`} key={d.id}>
+              <Contact
+                avatarUrl={d.avatar_url}
+                name={d.full_name}
+              />
+            </Link>
+            )
+          )}
+        </div>
     );
   }
 }
 
-export default Contacts;
+export default ContactList;

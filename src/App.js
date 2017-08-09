@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import Contacts from './components/Contacts';
 
 class App extends Component {
   render() {
+    const {children, title} = this.props;
     return (
-      <div className="App">
+      <div>
         <div className="App__Header">
-          Contacts
+          {title}
         </div>
-        <Contacts />
+        {children}
       </div>
     );
   }

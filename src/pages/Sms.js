@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import App from '../App.js';
 
 class Sms extends Component {
   render() {
     const {match} = this.props;
     return (
-      <div className='Sms'>
+      <App title='Send SMS'>
         {match.params.id}
-      </div>
+      </App>
     );
   }
 }
