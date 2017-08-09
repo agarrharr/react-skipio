@@ -3,9 +3,9 @@ import './Contact.css';
 
 class Contact extends Component {
   render() {
-    const {avatarUrl, name, onClick} = this.props;
+    const {avatarUrl, name} = this.props;
     return (
-      <div className='Contact' onClick={onClick}>
+      <div className='Contact'>
         <img className='Contact__Avatar' src={avatarUrl} alt={name} />
         <div>{name}</div>
       </div>
