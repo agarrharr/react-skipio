@@ -34,7 +34,6 @@ class Contacts extends Component {
   render() {
     return (
       <div className="Contacts">
-          <p>Contacts</p>
           {this.state.contacts.map(d => (
               <Contact
                 avatarUrl={d.avatar_url}
