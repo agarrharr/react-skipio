@@ -7,7 +7,7 @@ class Contact extends Component {
     return (
       <div className='Contact'>
         <img className='Contact__Avatar' src={avatarUrl} alt={name} />
-        <div>{name}</div>
+        <div className='Contact__Name'>{name}</div>
       </div>
     );
   }

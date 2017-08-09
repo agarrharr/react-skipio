@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
 import credentials from '../credentials.json';
+import './ContactList.css';
 
 const ITEMS_PER_PAGE = 10;
 
@@ -36,7 +37,7 @@ class ContactList extends Component {
     return (
         <div>
           {this.state.contacts.map(d => (
-            <Link to={`/sms/${d.id}`} key={d.id}>
+            <Link className='ContactList__Link' to={`/sms/${d.id}`} key={d.id}>
               <Contact
                 avatarUrl={d.avatar_url}
                 name={d.full_name}
