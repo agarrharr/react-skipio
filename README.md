@@ -19,6 +19,10 @@ Create a `src/credentials.json` file with the following and replace `123abc` wit
 npm start
 ```
 
+## Todo
+
+- [ ] Add pagination to `ContactList`
+
 ## Bootstrapped with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
