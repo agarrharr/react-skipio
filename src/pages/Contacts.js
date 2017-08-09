@@ -4,7 +4,6 @@ import ContactList from '../components/ContactList.js';
 
 class Contacts extends Component {
   render() {
-    const {match} = this.props;
     return (
       <App title='Contacts'>
         <ContactList />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Contact from './Contact';
 import credentials from '../credentials.json';
 
@@ -17,6 +17,7 @@ class ContactList extends Component {
     fetch(`https://${credentials.environment}.skipio.com/api/v2/contacts?token=${token}&page=${page}&per=${ITEMS_PER_PAGE}`)
     .then(results => results.json())
     .then(results => {
+      console.log(results.data);
       if (results.data) {
         this.setState({
           ...this.state,
