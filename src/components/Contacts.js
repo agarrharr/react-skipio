@@ -31,6 +31,10 @@ class Contacts extends Component {
     });
   }
 
+  handleClick = (data, event) => {
+    console.log(data.id);
+  }
+
   render() {
     return (
       <div className="Contacts">
@@ -38,6 +42,7 @@ class Contacts extends Component {
               <Contact
                 avatarUrl={d.avatar_url}
                 name={d.full_name}
+                onClick={this.handleClick.bind(this, d)}
                 key={d.id}
               />
             )
