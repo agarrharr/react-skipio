@@ -8,7 +8,8 @@ Create a `src/credentials.json` file with the following and replace `123abc` wit
 
 ```json
 {
-  "token": "123abc"
+  "token": "123abc",
+  "environment": "stage"
 }
 ```
 

@@ -13,7 +13,7 @@ class Contacts extends Component {
   componentDidMount() {
     const token = credentials.token;
     const page = 1;
-    fetch(`https://stage.skipio.com/api/v2/contacts?token=${token}&page=${page}&per=${ITEMS_PER_PAGE}`)
+    fetch(`https://${credentials.environment}.skipio.com/api/v2/contacts?token=${token}&page=${page}&per=${ITEMS_PER_PAGE}`)
     .then(results => results.json())
     .then(results => {
       if (results.data) {
