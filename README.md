@@ -22,6 +22,9 @@ npm start
 ## Todo
 
 - [ ] Add pagination to `ContactList`
+- [ ] Add ability to customize message
+- [ ] Show the name of the person you are messages in the title of the header
+- [ ] Show past messages
 
 ## Bootstrapped with Create React App
 
