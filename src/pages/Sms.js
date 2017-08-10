@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import App from '../App.js';
-import credentials from '../credentials.json';
 import TextInput from '../components/TextInput';
+import {postText} from '../fetch';
 
 class Sms extends Component {
   handleClick = message => {
-    axios.post(`https://${credentials.environment}.skipio.com/api/v2/messages?token=${credentials.token}`, {
-        recipients: [`contact-${this.props.match.params.id}`],
-        message: { body: message},
-      })
+    postText(this.props.match.params.id, message)
       .then(function (response) {
         console.log(response);
       })

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Contact from './Contact';
-import credentials from '../credentials.json';
+import {fetchContacts} from '../fetch';
 import './ContactList.css';
-
-const ITEMS_PER_PAGE = 10;
 
 class ContactList extends Component {
   state = {
@@ -14,21 +12,20 @@ class ContactList extends Component {
 
   componentDidMount() {
     const page = 1;
-    fetch(`https://${credentials.environment}.skipio.com/api/v2/contacts?token=${credentials.token}&page=${page}&per=${ITEMS_PER_PAGE}`)
-    .then(results => results.json())
-    .then(results => {
-      if (results.data) {
-        this.setState({
-          contacts: [
-            ...this.state.contacts,
-            ...results.data,
-          ],
-        });
-      }
-    })
-    .catch(e => {
-      console.warn(`Error occured fetching contacts: ${e}`);
-    });
+    fetchContacts(page)
+      .then(results => {
+        if (results.data) {
+          this.setState({
+            contacts: [
+              ...this.state.contacts,
+              ...results.data,
+            ],
+          });
+        }
+      })
+      .catch(e => {
+        console.warn(`Error occured fetching contacts: ${e}`);
+      });
   }
 
   render() {
