@@ -37,7 +37,6 @@ class Sms extends Component {
     const {name, phoneNumber} = this.state;
     return (
       <App title={name} subtitle={phoneNumber}>
-        {match.params.id}
         <TextInput onSubmit={m => {this.handleClick(m)}} />
       </App>
     );
