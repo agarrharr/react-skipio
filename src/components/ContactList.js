@@ -20,7 +20,6 @@ class ContactList extends Component {
       console.log(results.data);
       if (results.data) {
         this.setState({
-          ...this.state,
           contacts: [
             ...this.state.contacts,
             ...results.data,
