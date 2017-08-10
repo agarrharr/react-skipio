@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import App from '../App.js';
 import credentials from '../credentials.json';
+import TextInput from '../components/TextInput';
 
 class Sms extends Component {
-  handleClick = () => {
+  handleClick = message => {
     axios.post(`https://${credentials.environment}.skipio.com/api/v2/messages?token=${credentials.token}`, {
         recipients: [`contact-${this.props.match.params.id}`],
-        message: { body: "hello"},
+        message: { body: message},
       })
       .then(function (response) {
         console.log(response);
@@ -22,7 +23,7 @@ class Sms extends Component {
     return (
       <App title='Send SMS'>
         {match.params.id}
-        <button onClick={this.handleClick}>Say hello</button>
+        <TextInput onSubmit={m => {this.handleClick(m)}} />
       </App>
     );
   }

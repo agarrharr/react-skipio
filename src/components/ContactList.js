@@ -17,7 +17,6 @@ class ContactList extends Component {
     fetch(`https://${credentials.environment}.skipio.com/api/v2/contacts?token=${credentials.token}&page=${page}&per=${ITEMS_PER_PAGE}`)
     .then(results => results.json())
     .then(results => {
-      console.log(results.data);
       if (results.data) {
         this.setState({
           contacts: [
