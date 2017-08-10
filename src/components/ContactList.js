@@ -33,17 +33,17 @@ class ContactList extends Component {
 
   render() {
     return (
-        <div>
-          {this.state.contacts.map(d => (
-            <Link className='ContactList__Link' to={`/sms/${d.id}`} key={d.id}>
-              <Contact
-                avatarUrl={d.avatar_url}
-                name={d.full_name}
-              />
-            </Link>
-            )
-          )}
-        </div>
+      <div>
+        {this.state.contacts.map(d => (
+          <Link className='ContactList__Link' to={`/sms/${d.id}`} key={d.id}>
+            <Contact
+              avatarUrl={d.avatar_url}
+              name={d.full_name}
+            />
+          </Link>
+          )
+        )}
+      </div>
     );
   }
 }
