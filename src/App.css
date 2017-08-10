@@ -2,6 +2,8 @@
 }
 
 .App__Header {
+  box-sizing: border-box;
+  height: 82px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

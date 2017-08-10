@@ -1,0 +1,5 @@
+.TextInput__Input {
+  border: 1px solid #CCC;
+  box-shadow: 1px 8px 6px -6px #CCC;
+  padding: 10px;
+}
