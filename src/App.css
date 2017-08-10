@@ -1,8 +1,21 @@
+.App {
+}
+
 .App__Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #387DCA;
-  height: 15px;
   padding: 20px;
-  color: white;
+}
+
+.App__HeaderTitle {
   font-size: 1.2em;
   font-weight: bold;
+  color: white;
+}
+
+.App__HeaderSubtitle {
+  font-size: 1.0em;
+  color: #EEEEEE;
 }
